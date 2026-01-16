@@ -20,21 +20,7 @@
     .small{color:#666;font-size:0.95rem}
   </style>
 </head>
-<script>
-  // Protection anti-robots : reconstruction des emails et téléphones
-  document.querySelectorAll(".email").forEach(function(el) {
-    const user = el.dataset.user;
-    const domain = el.dataset.domain;
-    const address = user + "@" + domain;
-    el.innerHTML = '<a href="mailto:' + address + '">' + address + '</a>';
-  });
 
-  document.querySelectorAll(".tel").forEach(function(el) {
-    const tel = el.dataset.tel;
-    const formatted = tel.replace(/^33/, "0").replace(/(\d{2})(?=\d)/g, "$1 ");
-    el.innerHTML = '<a href="tel:+' + tel + '">' + formatted + '</a>';
-  });
-</script>
 
 <body>
   <header>
@@ -135,5 +121,22 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+  
+  <script>
+  // Protection anti-robots : reconstruction des emails et téléphones
+  document.querySelectorAll(".email").forEach(function(el) {
+    const user = el.dataset.user;
+    const domain = el.dataset.domain;
+    const address = user + "@" + domain;
+    el.innerHTML = '<a href="mailto:' + address + '">' + address + '</a>';
+  });
+
+  document.querySelectorAll(".tel").forEach(function(el) {
+    const tel = el.dataset.tel;
+    const formatted = tel.replace(/^33/, "0").replace(/(\d{2})(?=\d)/g, "$1 ");
+    el.innerHTML = '<a href="tel:+' + tel + '">' + formatted + '</a>';
+  });
+</script>
+
 </body>
 </html>
