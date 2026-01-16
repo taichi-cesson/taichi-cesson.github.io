@@ -20,6 +20,22 @@
     .small{color:#666;font-size:0.95rem}
   </style>
 </head>
+<script>
+  // Protection anti-robots : reconstruction des emails et téléphones
+  document.querySelectorAll(".email").forEach(function(el) {
+    const user = el.dataset.user;
+    const domain = el.dataset.domain;
+    const address = user + "@" + domain;
+    el.innerHTML = '<a href="mailto:' + address + '">' + address + '</a>';
+  });
+
+  document.querySelectorAll(".tel").forEach(function(el) {
+    const tel = el.dataset.tel;
+    const formatted = tel.replace(/^33/, "0").replace(/(\d{2})(?=\d)/g, "$1 ");
+    el.innerHTML = '<a href="tel:+' + tel + '">' + formatted + '</a>';
+  });
+</script>
+
 <body>
   <header>
     <div style="max-width:920px;margin:0 auto;">
@@ -33,59 +49,74 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <p><strong>Bienvenue</strong> ! Nous pratiquons le Taichi (Taijiquan) dans une ambiance conviviale, adaptée à tous niveaux.</p>
-      <p class="small">👉 Vous pouvez modifier les textes quand vous voulez : il suffit d’éditer ce fichier <code>index.html</code>.</p>
+<main>
+  <section class="hero">
+    <p><strong>Bienvenue</strong> ! Nous pratiquons le Taichi (Taijiquan) dans une ambiance conviviale, adaptée à tous niveaux.</p>
+    <p class="small">👉 Vous pouvez modifier les textes quand vous voulez : il suffit d’éditer ce fichier <code>index.html</code>.</p>
+  </section>
+
+  <div class="grid">
+    <section id="horaires" class="card">
+      <h2>Horaires</h2>
+
+      <ul>
+        <li><strong>Jour :</strong> Mercredi</li>
+        <li><strong>Heure :</strong> 10h30 à 12h00</li>
+        <li><strong>Niveau :</strong> tous niveaux</li>
+        <li><strong>Lieu :</strong> Espace sportif Bourgchevreuil</li>
+      </ul>
+
+      <ul>
+        <li><strong>Jour :</strong> Mercredi</li>
+        <li><strong>Heure :</strong> 18h00 à 19h30</li>
+        <li><strong>Niveau :</strong> tous niveaux</li>
+        <li><strong>Lieu :</strong> Espace sportif Bourgchevreuil</li>
+      </ul>
+
+      <ul>
+        <li><strong>Jour :</strong> Jeudi</li>
+        <li><strong>Heure :</strong> 12h00 à 13h30</li>
+        <li><strong>Niveau :</strong> tous niveaux</li>
+        <li><strong>Lieu :</strong> Espace sportif Bourgchevreuil</li>
+      </ul>
     </section>
 
-    <div class="grid">
-      <section id="horaires" class="card">
-        <h2>Horaires</h2>
-        <ul>
-          <li>Jour : Mercredi </li>
-          <li>Heure : 10h30 à 12h00 </li>
-          <li>Niveau :tous niveaux</li>
-          <li>Lieu : espace Bourgchevreuil </li>
-        </ul>
-        <ul>
-          <li>Jour : Mercredi </li>
-          <li>Heure : 18h00 à 19h30 </li>
-          <li>Niveau :tous niveaux</li>
-          <li>Lieu : espace Bourgchevreuil </li>
-        </ul>
-       <ul>
-          <li>Jour : Jeudi </li>
-          <li>Heure : 12h00 à 13h30 </li>
-          <li>Niveau :tous niveaux</li>
-          <li>Lieu : espace Bourgchevreuil </li>
-        </ul>
-      </section>
+    <section id="lieu" class="card">
+      <h2>Lieu</h2>
+      <p><strong>Salle :</strong> Espace sportif de Bourgchevreuil</p>
+      <p><strong>Adresse :</strong> Boulevard de Dézerseul, 35510 Cesson-Sévigné</p>
+      <p>
+        📍
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Espace+sportif+de+Bourgchevreuil+Boulevard+de+D%C3%A9zerseul+35510+Cesson-S%C3%A9vign%C3%A9"
+          target="_blank"
+          rel="noopener"
+        >
+          Voir sur Google Maps
+        </a>
+      </p>
+    </section>
+  </div>
 
-      <section id="lieu" class="card">
-        <h2>Lieu: </h2>
-        <p>Salle :   Espace sportif Bourgchevreuil </p>
-        <p>Adresse : Bd de Dézerseul, 35510 Cesson-Sévigné</p>
-        <p class="small">Astuce : vous pourrez ajouter un lien Google Maps.</p>
-      </section>
-    </div>
-
-   <section id="contact" class="card" style="margin-top:14px;">
+<section id="contact" class="card" style="margin-top:14px;">
   <h2>Contact</h2>
 
-  <p><strong>Jean Guilbaud</strong> (Président)<br>
-    📞 <a href="tel:+33685749570">06 85 74 95 70</a><br>
-    ✉️ <a href="mailto:j.guilbaud35@orange.fr">j.guilbaud35@orange.fr</a>
+  <p>
+    <strong>Jean Guilbaud</strong> (Président)<br>
+    📞 <span class="tel" data-tel="33685749570"></span><br>
+    ✉️ <span class="email" data-user="j.guilbaud35" data-domain="orange.fr"></span>
   </p>
 
-  <p><strong>Marie-Françoise Toinel</strong> (Trésorière)<br>
-    📞 <a href="tel:+33679369675">06 79 36 96 75</a><br>
-    ✉️ <a href="mailto:georges.toinel@wanadoo.fr">georges.toinel@wanadoo.fr</a>
+  <p>
+    <strong>Marie-Françoise Toinel</strong> (Trésorière)<br>
+    📞 <span class="tel" data-tel="33679369675"></span><br>
+    ✉️ <span class="email" data-user="georges.toinel" data-domain="wanadoo.fr"></span>
   </p>
 
-  <p><strong>Patricia Galibourg</strong> (Secrétaire)<br>
-    📞 <a href="tel:+33646037183">06 46 03 71 83</a><br>
-    ✉️ <a href="mailto:patricia.galibourg@gmail.com">patricia.galibourg@gmail.com</a>
+  <p>
+    <strong>Patricia Galibourg</strong> (Secrétaire)<br>
+    📞 <span class="tel" data-tel="33646037183"></span><br>
+    ✉️ <span class="email" data-user="patricia.galibourg" data-domain="gmail.com"></span>
   </p>
 
   <p class="small">
@@ -93,7 +124,7 @@
     concernant le club, les inscriptions ou les cours.
   </p>
 </section>
-  </main>
+</main>
 
   <footer>
     <div style="max-width:920px;margin:0 auto;">
