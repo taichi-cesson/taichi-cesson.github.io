@@ -1,11 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Club de Taichi Cesson-Sévigné</title>
+  <meta name="description" content="Site officiel du Club de Taichi Cesson-Sévigné : cours, horaires, lieu, contact." />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;line-height:1.5}
+    header{padding:28px 18px;border-bottom:1px solid #e6e6e6}
+    nav a{margin-right:14px;text-decoration:none}
+    main{max-width:920px;margin:0 auto;padding:18px}
+    .hero{padding:18px;border:1px solid #e6e6e6;border-radius:14px}
+    h1{margin:0 0 6px}
+    h2{margin-top:26px}
+    .grid{display:grid;gap:14px}
+    @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+    .card{padding:16px;border:1px solid #e6e6e6;border-radius:14px}
+    footer{padding:18px;border-top:1px solid #e6e6e6;color:#666}
+    .small{color:#666;font-size:0.95rem}
+  </style>
 </head>
 <body>
-  <h1>Club de Taichi Cesson-Sévigné</h1>
-  <p>Bienvenue sur le site officiel du club.</p>
+  <header>
+    <div style="max-width:920px;margin:0 auto;">
+      <h1>Club de Taichi Cesson-Sévigné</h1>
+      <div class="small">Site officiel du club</div>
+      <nav style="margin-top:10px;">
+        <a href="#horaires">Horaires</a>
+        <a href="#lieu">Lieu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p><strong>Bienvenue</strong> ! Nous pratiquons le Taichi (Taijiquan) dans une ambiance conviviale, adaptée à tous niveaux.</p>
+      <p class="small">👉 Vous pouvez modifier les textes quand vous voulez : il suffit d’éditer ce fichier <code>index.html</code>.</p>
+    </section>
+
+    <div class="grid">
+      <section id="horaires" class="card">
+        <h2>Horaires</h2>
+        <ul>
+          <li>Jour : …</li>
+          <li>Heure : …</li>
+          <li>Niveau : débutants / tous niveaux</li>
+        </ul>
+      </section>
+
+      <section id="lieu" class="card">
+        <h2>Lieu</h2>
+        <p>Salle : …</p>
+        <p>Adresse : …</p>
+        <p class="small">Astuce : vous pourrez ajouter un lien Google Maps.</p>
+      </section>
+    </div>
+
+    <section id="contact" class="card" style="margin-top:14px;">
+      <h2>Contact</h2>
+      <p>Email : <a href="mailto:contact@votre-association.fr">contact@votre-association.fr</a></p>
+      <p>Téléphone : …</p>
+      <p class="small">Réseaux : Facebook / Instagram (si vous en avez)</p>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:920px;margin:0 auto;">
+      © <span id="y"></span> Club de Taichi Cesson-Sévigné — Tous droits réservés
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
