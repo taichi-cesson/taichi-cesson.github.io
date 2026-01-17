@@ -1,28 +1,217 @@
-Pratiquer le Taï chi chuan** L’OCC TAI CHI CHUAN style YANG existe depuis 1999.
-Il s’agit d’une discipline millénaire chinoise qui est à la base de tous les arts martiaux.  
-  
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bienfaits — Taï Chi Chuan</title>
+  <style>
+    :root{
+      --text:#1f2937;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+      --bg:#ffffff;
+      --card:#fafafa;
+      --accent:#0f766e;
+    }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    main{
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+    nav{
+      margin-bottom: 1.25rem;
+    }
+    nav a{
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover{ text-decoration: underline; }
 
- 
-**Qu’est-ce que le Taï Chi Chuan ? **
-Le Taichi Chuan est à l'origine un art martial qui est pratiqué actuellement comme une discipline dans laquelle le corps, la présence et la respiration sont unifiés. C'est un enchaînement de mouvement exécutés lentement, dans la rondeur et qui convient à tous les âges. 
-**Quels en sont les bienfaits ? **
-Le Taï Chi pacifie les émotions, régularise la circulation sanguine, fortifie les articulations, les ligaments et les muscles.
-D’après la médecine chinoise, la pratique régulière du Taï Chi Chuan nous préserve des maladies, prolonge la durée de la vie, stabilise et stimule le système nerveux, en un mot, régénère la vie de l’homme. 
-Le Taichi Chuan renforce l'énergie vitale présente en chacun. Elle aide à la maîtrise de la respiration et de la concentration. Cette énergie développée par la pratique permet d'améliorer la santé
-- bien être,
-- relâchement des tensions musculaires,
-- lâcher prise,
-- bonne humeur
-- travail d'enracinement, de respiration et d'équilibre
-- Activation de la circulation sanguine
-- Assouplissement du corps  
+    header{
+      padding: 1.25rem 1.25rem 1.1rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
+    h1{
+      margin:0 0 .35rem 0;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+    .intro{
+      margin:0;
+      color:var(--muted);
+      max-width: 70ch;
+    }
+    .badge{
+      display:inline-block;
+      margin-top: .75rem;
+      padding: .25rem .6rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--muted);
+      font-size: .9rem;
+    }
 
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 900px){
+      .grid{ grid-template-columns: 1.1fr .9fr; }
+    }
 
-**En savoir plus sur la pratique du Taï chi chuan :**
- 
-Comment faut-il s’habiller pour pratiquer le Taï Chi Chuan ? **
-Vêtement de sport, jogging… une tenue décontractée, pour être à l’aise notamment au niveau de la ceinture, pour permettre une respiration abdominale. 
-A noter que le Taï Chi Chuan se pratique pieds nus ou en chaussettes ou en chaussures basses et souples
+    section{
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--card);
+    }
+    h2{
+      margin:0 0 .75rem 0;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    p{ margin: .75rem 0; }
+    .note{
+      margin-top: 1rem;
+      padding: .85rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background:#ffffff;
+      color: var(--muted);
+      font-size: .95rem;
+    }
 
-  
+    ul{
+      margin: .6rem 0 0 1.2rem;
+    }
+    li{ margin: .4rem 0; }
 
+    .callout{
+      padding: 1.1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #ffffff;
+    }
+    .callout h3{
+      margin:0 0 .5rem 0;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+    .callout p{
+      margin:0;
+      color: var(--muted);
+    }
+
+    footer{
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+    }
+    footer a{
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <a href="index.html">← Retour vers l’accueil</a>
+    </nav>
+
+    <header>
+      <h1>Bienfaits du Taï Chi Chuan</h1>
+      <p class="intro">
+        L’OCC TAI CHI CHUAN style YANG existe depuis 1999. Le Taï Chi Chuan est une discipline millénaire chinoise,
+        à la base de nombreux arts martiaux.
+      </p>
+      <span class="badge">Accessible à tous les âges • Mouvement • Présence • Respiration</span>
+    </header>
+
+    <div class="grid">
+      <!-- Colonne principale -->
+      <section aria-labelledby="definition">
+        <h2 id="definition">Qu’est-ce que le Taï Chi Chuan&nbsp;?</h2>
+        <p>
+          Le Taï Chi Chuan est à l’origine un art martial, pratiqué aujourd’hui comme une discipline dans laquelle
+          le corps, la présence et la respiration sont unifiés.
+        </p>
+        <p>
+          C’est un enchaînement de mouvements exécutés lentement, dans la rondeur, et qui convient à tous les âges.
+        </p>
+
+        <div class="callout" style="margin-top:1rem;">
+          <h3>En bref</h3>
+          <p>Une pratique douce et progressive, centrée sur la fluidité, l’attention et le souffle.</p>
+        </div>
+      </section>
+
+      <!-- Colonne droite -->
+      <section aria-labelledby="bienfaits">
+        <h2 id="bienfaits">Quels en sont les bienfaits&nbsp;?</h2>
+        <p>
+          Le Taï Chi pacifie les émotions, régularise la circulation sanguine, et fortifie les articulations,
+          les ligaments et les muscles.
+        </p>
+        <p>
+          D’après la médecine chinoise, la pratique régulière du Taï Chi Chuan préserverait des maladies,
+          prolongerait la durée de la vie, stabiliserait et stimulerait le système nerveux — en un mot,
+          régénérerait la vie de l’homme.
+        </p>
+        <p>
+          Le Taï Chi Chuan renforce l’énergie vitale présente en chacun. Il aide à la maîtrise de la respiration
+          et de la concentration. Cette énergie développée par la pratique permet d’améliorer la santé.
+        </p>
+
+        <ul>
+          <li>Bien-être</li>
+          <li>Relâchement des tensions musculaires</li>
+          <li>Lâcher prise</li>
+          <li>Bonne humeur</li>
+          <li>Travail d’enracinement, de respiration et d’équilibre</li>
+          <li>Activation de la circulation sanguine</li>
+          <li>Assouplissement du corps</li>
+        </ul>
+      </section>
+    </div>
+
+    <section aria-labelledby="savoir-plus" style="margin-top:1.25rem;">
+      <h2 id="savoir-plus">En savoir plus sur la pratique</h2>
+
+      <h3 style="margin:0 0 .5rem 0; font-size:1.05rem; color:var(--text);">
+        Comment faut-il s’habiller pour pratiquer le Taï Chi Chuan&nbsp;?
+      </h3>
+      <p>
+        Vêtements de sport, jogging… une tenue décontractée, pour être à l’aise notamment au niveau de la ceinture,
+        afin de permettre une respiration abdominale.
+      </p>
+
+      <div class="note">
+        À noter&nbsp;: le Taï Chi Chuan se pratique pieds nus, en chaussettes, ou avec des chaussures basses et souples.
+      </div>
+    </section>
+
+    <footer>
+      <a href="index.html">Retour vers l’accueil</a>
+    </footer>
+  </main>
+</body>
+</html>
