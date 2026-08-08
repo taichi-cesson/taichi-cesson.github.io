@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taichi-cesson.github.io/sitemap.xml
